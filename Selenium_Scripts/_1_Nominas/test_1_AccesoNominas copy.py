@@ -16,10 +16,6 @@ from Funciones_Globales.Funciones_Globales import global_functions
 from Funciones_Nominas.Funciones_Nominas import nominas_functions
 
 def abrirNavegador(navegador="chrome", incognito=True, download_path=None, token=None, url="http://app.colegium.cloud"):
-    if download_path is None:
-        download_path = os.path.join(os.environ['USERPROFILE'], 'Downloads')  # Ruta por defecto
-    os.makedirs(download_path, exist_ok=True)  # Crea la carpeta si no existe
-
     if navegador == "chrome":
         options = ChromeOptions()
         if incognito:

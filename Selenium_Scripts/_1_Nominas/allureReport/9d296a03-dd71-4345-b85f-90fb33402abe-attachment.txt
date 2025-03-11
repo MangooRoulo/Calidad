@@ -1,0 +1,12 @@
+Token aplicado correctamente: U8xv6X$L2>l&
+■■■■■-Iniciando Tests en chrome■■■■■
+■■■■■-Inicio inicio sesion-■■■■■
+■■■■■-Fin inicio sesion-■■■■■
+■■■■■-Inicio Acceso Nominas-■■■■■
+■■■■■-Fin inicio sesion-■■■■■
+■■■■■-Inicio Ordenamiento con criterio //tbody/tr[1]/td[2]/div[1]/div[1]/div[1]/ul[1]/li[1]/button[1]/div[1]/span[1]-■■■■■
+■■■■■-Aplicando ordenamiento (//span[normalize-space()='Número de lista'])[1]-■■■■■
+■■■■■-Aplicando ordenamiento (//button[@type='button'])[8]-■■■■■
+■■■■■-Aplicando ordenamiento (//span[contains(text(),'A-Z Nombre')])[2]-■■■■■
+■■■■■-Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[2]-■■■■■
+Cerrando el driver...
