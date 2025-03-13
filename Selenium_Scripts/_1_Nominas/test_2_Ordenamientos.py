@@ -148,8 +148,8 @@ def test_AccesoNominas(driver_setup):
 
         funcion.inicioSesion()
         funcionNominas.AccesoNominas()
-        funcionNominas.Ordenamientossasasd()
-        funcionNominas.validar_informacion_curso(Ordenamientos)
+        funcionNominas.Nominas_Ordenamiento()
+        #funcionNominas.OrdenxD()
         funcion.cerrarSesion()
 
     except Exception as e:
