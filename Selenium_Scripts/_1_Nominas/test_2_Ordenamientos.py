@@ -77,11 +77,11 @@ def abrirNavegador(navegador="chrome", incognito=True, download_path=None, token
                 "X-test-run": token  # Token proporcionado
             }
         })
-        print(f"Token aplicado correctamente: {token}")
+        print(f"■■■■■-Token aplicado correctamente: {token} ✅✅✅ -■■■■■")
 
     driver.maximize_window()
     driver.get(url)  # Navegar a la URL especificada
-    print(f"■■■■■-Iniciando Tests en {navegador}■■■■■")
+    print(f"■■■■■-Iniciando Tests en {navegador}-■■■■■")
     return driver
 
 @pytest.fixture(scope="function")
@@ -115,32 +115,8 @@ def pytest_runtest_makereport(item, call):
             take_screenshot_on_failure(driver, item.name)
 
 @allure.feature('Nominas Test')
-def test_AccesoNominas(driver_setup):
+def test_Ordenamientos(driver_setup):
     driver = driver_setup
-
-    Ordenamientos = {
-        "Estudiante_1": {
-            "Orden": "1",
-            "Primer_Apellido": "Diaz",
-            "Segundo_Apellido": "Mendoza",
-            "Nombre": "Sofia",
-            "ID": "2181782-1"
-        },
-        "Estudiante_2": {
-            "Orden": "3",
-            "Primer_Apellido": "Gonadasdzalez",
-            "Segundo_Apellido": "Lopez",
-            "Nombre": "Maria",
-            "ID": "2987505-7"
-        },
-        "Estudiante_3": {
-            "Orden": "5",
-            "Primer_Apellido": "Martinez",
-            "Segundo_Apellido": "Sanchez",
-            "Nombre": "Juan",
-            "ID": "8571154-7"
-        }
-    }
 
     try:
         funcion = global_functions(driver)
@@ -149,7 +125,7 @@ def test_AccesoNominas(driver_setup):
         funcion.inicioSesion()
         funcionNominas.AccesoNominas()
         #funcionNominas.Nominas_Ordenamiento("1","Diaz","Mendoza","Sofia","2181782-1")
-        funcionNominas.pruebas("1","Diaz","Mendoza","Sofia","218144782-1")
+        funcionNominas.pruebas("Orden","Primer_Apellido","Segundo_Apellido","Nombre","ID")
 
     except Exception as e:
         # Tomar la captura de pantalla si ocurre un error
