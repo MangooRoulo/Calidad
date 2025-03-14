@@ -41,10 +41,8 @@ class nominas_functions():
             return {}
 
 # Funciones
-
     # *************************************************Funciones Recurrentes*************************************************
     def AccesoNominas(self):
-
         print("■■■■■-Inicio Acceso Nominas-■■■■■")
         time.sleep(2)
         self.driver.implicitly_wait(20) 
@@ -59,8 +57,7 @@ class nominas_functions():
         # Verificar que se haya ingresado en la sección correspondiente
         assert Campos.SeccionNominas in self.driver.find_element(By.XPATH, Campos.NombreNominas).text, "Sección Erronea"
         print("■■■■■-Fin Acceso Nominas-■■■■■")
-        time.sleep(2)
-        
+        time.sleep(2)  
     def AccesoCrusos(self):
         print(f"■■■■■-Acceso Cursos-■■■■■")
         self.driver.find_element(By.XPATH, Campos.botonCursos).click()
@@ -71,161 +68,192 @@ class nominas_functions():
         time.sleep(2)
         print(f"■■■■■-Fin Acceso Cursos-■■■■■")
         
-    def Nominas_Ordenamiento(self, Orden, Primer_Apellido, Segundo_Apellido, Nombre, ID):
-
-        criterios = [
-            Campos.AZPrimerApellido,
-            Campos.AZNombre,
-            Campos.AZVaronesMujeres,
-            Campos.AZMjeresVarones
-        ]
-
-        ordenamientos = [
-            Campos.NumeroDeLista,
-            Campos.AZOPrimerApellido,
-            Campos.AZONombre,
-            Campos.AZOVaronesMujeres,
-            Campos.AZOMujeresVarones
-        ]
-
-        alumnos_por_ordenamiento1 = self.cargar_datos_alumnos('alumnos.json')
-
-        for criterio in criterios:
-            print(f"■■■■■-Inicio Asignación de criterio {criterio}-■■■■■")
-
-            #Seleccionando Criterio
-            self.driver.find_element(By.XPATH, Campos.BotonDespliegueCriterio).click()
-            self.driver.implicitly_wait(20)
-            time.sleep(2)
-            self.driver.find_element(By.XPATH, criterio).click()
-            self.driver.implicitly_wait(20)
-            time.sleep(2)
-
-            #Dando Aceptar en el label
-            self.driver.find_element(By.XPATH, Campos.botonContinuar).click()
-            self.driver.implicitly_wait(20)
-            time.sleep(2)            
-            
-            # Verificar mensaje de éxito
-            assert Campos.MensajeExito in self.driver.find_element(By.XPATH, Campos.LabelAceptar).text, "Mensaje Erroneo"
-                        
-            print(f"■■■■■-Fin asignación de criterio {criterio}-■■■■■")
-
-            for ordenamiento in ordenamientos:
-                print(f"■■■■■-Aplicando ordenamiento {ordenamiento}-■■■■■")
-                
-                #Seleccionando Ordenamiento
-                self.driver.find_element(By.XPATH, Campos.BotonDespliegueOrdenamiento).click()
-                self.driver.implicitly_wait(20)
-                time.sleep(2)
-                self.driver.find_element(By.XPATH, ordenamiento).click()
-                self.driver.implicitly_wait(20)
-                time.sleep(2)
-                
-                #Dando Aceptar en el label
-                self.driver.find_element(By.XPATH, Campos.botonContinuar).click()
-                self.driver.implicitly_wait(20)
-                time.sleep(2) 
-                
-                # Verificar mensaje de éxito
-                assert Campos.MensajeExito in self.driver.find_element(By.XPATH, Campos.LabelAceptar).text, "Mensaje Erroneo"
-
-                print(f"■■■■■-Fin Aplicando ordenamiento {ordenamiento}-■■■■■")
-                
-                #Acceso Cursos
-                self.AccesoCrusos()
-                self.driver.implicitly_wait(20)
-                time.sleep(2)
-                    
-                # Validar la información de tres alumnos
-                alumnos = alumnos_por_ordenamiento1.get(ordenamiento, [])
-                               
-                
-                    
-                print(f"■■■■■-Validando Información del alumno-■■■■■")
-
-                try:
-                    # Esperar a que la tabla esté presente en el DOM y sea visible
-                    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//table[@id='filterTbl']")))
-                
-                    # Encontrar todas las filas de la tabla
-                    filas = self.driver.find_elements(By.XPATH, "(//tbody)[1]")
-                
-                    encontrado = False
-                
-                    # Iterar sobre cada fila para buscar la información específica
-                    for fila in filas:
-                        # Obtener el texto de cada columna en la fila
-                        columnas = fila.find_elements(By.TAG_NAME, "td")
-                        texto_columnas = [columna.text.strip() for columna in columnas]
-                    
-                        # Validar que la fila contenga la información esperada
-                        if (Orden in texto_columnas[0] and
-                            Primer_Apellido in texto_columnas[1] and
-                            Segundo_Apellido in texto_columnas[2] and
-                            Nombre in texto_columnas[3] and
-                            ID in texto_columnas[4]):
-                            encontrado = True
-                            break
-                
-                    # Si se encontró la información, retornar True (existente y visible)
-                    if encontrado:
-                        return True
-                    else:
-                        return False
-            
-                except Exception as e:
-                    print(f"Error al validar información del curso: {str(e)}")
-                    return False
-
-
-            print(f"■■■■■-Fin Validando Información del alumno-■■■■■")
-                    
-            #Regreso a nominas
-            self.AccesoNominas()
-            self.driver.implicitly_wait(20)
-            time.sleep(2) 
-            
     def validar_informacion_curso(self, Orden, Primer_Apellido, Segundo_Apellido, Nombre, ID):
-            try:
-                # Esperar a que la tabla esté presente en el DOM y sea visible
-                WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//table[@id='filterTbl']")))
+        
+        DatosAlumnos = {
+            "Orden_1": {
+                "Estudiante_1": {"Orden": "5", "Primer_Apellido": "Lopez", "Segundo_Apellido": "Kiñon", "Nombre": "Sara", "ID": "2036332-0"},
+            },
+            "Orden_2": {
+                "Estudiante_2": {"Orden": "1", "Primer_Apellido": "Diaz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
+            },
+        }
+        
+        # Validar la información de los alumnos según el orden actual
+        orden_key = f"Orden_{contador_orden}"  # Orden_1, Orden_2, etc.
+        alumnos = DatosAlumnos.get(orden_key, {})
+        
+        print(f"■■■■■-Validando Información del {orden_key}-■■■■■")
+
+        try:
+            # Procesamiento único por orden_key
+            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//table[@id='filterTbl']")))
+            filas = self.driver.find_elements(By.XPATH, "(//tbody)[1]/tr")
+            primeras_tres_filas = filas[:3]  # Obtener filas una sola vez
+            datos_filas = []  # Almacenar datos de filas para validaciones posteriores
             
-                # Encontrar todas las filas de la tabla
-                filas = self.driver.find_elements(By.XPATH, "(//tbody)[1]")
+            # Capturar datos de las filas
+            for fila in primeras_tres_filas:
+                columnas = fila.find_elements(By.TAG_NAME, "td")
+                datos_filas.append([col.text.strip() for col in columnas])
             
+            # Validar todos los alumnos con los datos capturados
+            for alumno_key, alumno in alumnos.items():
+                print(f"■■■■■-Validando Información del {alumno_key}-■■■■■")
                 encontrado = False
             
-                # Iterar sobre cada fila para buscar la información específica
-                for fila in filas:
-                    # Obtener el texto de cada columna en la fila
-                    columnas = fila.find_elements(By.TAG_NAME, "td")
-                    texto_columnas = [columna.text.strip() for columna in columnas]
-                
-                    # Validar que la fila contenga la información esperada
-                    if (Orden in texto_columnas[0] and
-                        Primer_Apellido in texto_columnas[1] and
-                        Segundo_Apellido in texto_columnas[2] and
-                        Nombre in texto_columnas[3] and
-                        ID in texto_columnas[4]):
+                # Buscar en los datos pre-capturados
+                for fila_data in datos_filas:
+                    if (alumno["Orden"] == fila_data[0] and
+                        alumno["Primer_Apellido"] == fila_data[1] and
+                        alumno["Segundo_Apellido"] == fila_data[2] and
+                        alumno["Nombre"] == fila_data[3] and
+                        alumno["ID"] == fila_data[4]):
+                        
                         encontrado = True
+                        print(f"■■■■■-Información del alumno {alumno['Nombre']} es correcta ✅✅✅ -■■■■■")
                         break
             
-                # Si se encontró la información, retornar True (existente y visible)
-                if encontrado:
-                    return True
-                else:
-                    return False
+                if not encontrado:
+                    print(f"■■■■■-Error: Información del {alumno['Nombre']} en {orden_key} es Incorrecta ❌❌❌ -■■■■■")
+                    print("Datos encontrados en las primeras 3 filas:")
+                    for idx, fila in enumerate(datos_filas, 1):
+                        print(f"Fila {idx}: {fila}")
+                    todos_correctos = False
+            
+                print(f"■■■■■-Fin Validando {alumno_key}-■■■■■")
+
+        except Exception as e:
+            print(f"■■■■■-Error crítico en {orden_key}: {str(e)} ❌❌❌ -■■■■■")
+            todos_correctos = False
+
+        print(f"■■■■■-Fin Validación {orden_key}-■■■■■")
+        contador_orden += 1
+
+        # Navegación única después de procesar todo el orden_key
+        self.AccesoNominas()
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+
+    def crearAlumno(self):
+        print("■■■■■-Inicio crear alumno 1-■■■■■")
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.AgregarEstudiante).click()
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.Indentificador).send_keys("2.036.332-0")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.FechaInscripción).send_keys("15/03/2025")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.NombreEstudiante).send_keys("Sara")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.ApellidoEstudiante).send_keys("Lopez")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.SegundoApellido).send_keys("Kiñon")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.FechaNacimiento).send_keys("29/07/2005")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.BotonGuardar).click()
+        self.driver.implicitly_wait(20)
+        time.sleep(2)  
+        self.driver.find_element(By.XPATH, Campos.BotonConfirmar).click()
+        self.driver.implicitly_wait(20)  
+        time.sleep(2)
+        print("■■■■■-Fin crear alumno 1-■■■■■")
         
-            except Exception as e:
-                print(f"■■■■■-Error al validar información del curso: {str(e)} ❌❌❌ -■■■■■")
+        #Acceso a cursos
+        self.AccesoCrusos()
+        
+        print("■■■■■-Inicio crear alumno 2-■■■■■")
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.AgregarEstudiante).click()
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.Indentificador).send_keys("3.167.303-8")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.FechaInscripción).send_keys("15/05/2025")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.NombreEstudiante).send_keys("Sandra")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.ApellidoEstudiante).send_keys("Keller")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.SegundoApellido).send_keys("Hernadez")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.FechaNacimiento).send_keys("02/02/2003")
+        self.driver.implicitly_wait(20)
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, Campos.BotonGuardar).click()
+        self.driver.implicitly_wait(20)
+        time.sleep(2)  
+        self.driver.find_element(By.XPATH, Campos.BotonConfirmar).click()
+        self.driver.implicitly_wait(20)  
+        time.sleep(2)
+        print("■■■■■-Fin crear alumno 2-■■■■■")
+        #Acceso Cursos
+        self.AccesoCrusos()
+    def eliminar_alumnos(self, alumnos_a_eliminar: dict):
+        try:
+            print("■■■■■- Iniciando eliminación de alumnos  -■■■■■")
+            
+            # Esperar y obtener la tabla completa
+            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//table[@id='filterTbl']")))
+            filas = self.driver.find_elements(By.XPATH, "(//tbody)[1]/tr")
+            
+            alumnos_eliminados = 0
+            alumnos_requeridos = 2  # Cantidad específica a eliminar
+            
+            for fila in filas:
+                # Extraer datos de cada fila
+                columnas = fila.find_elements(By.TAG_NAME, "td")
+                datos_fila = {
+                    "Orden": columnas[0].text.strip(),
+                    "Primer_Apellido": columnas[1].text.strip(),
+                    "Segundo_Apellido": columnas[2].text.strip(),
+                    "Nombre": columnas[3].text.strip(),
+                    "ID": columnas[4].text.strip()
+                }
+                
+                # Comparar con los alumnos del diccionario
+                for alumno_key, alumno_data in alumnos_a_eliminar.items():
+                    if all(datos_fila[key] == alumno_data[key] for key in alumno_data):
+                        # Encontrar y hacer clic en botón de eliminar
+                        boton_eliminar = fila.find_element(By.XPATH, ".//button[contains(@class, 'btn-eliminar')]")
+                        boton_eliminar.click()
+                        
+                        # Confirmar eliminación en diálogo
+                        WebDriverWait(self.driver, 5).until(EC.alert_is_present())
+                        self.driver.switch_to.alert.accept()
+                        
+                        print(f"Alumno {alumno_key} eliminado: {alumno_data['Nombre']} ✅")
+                        alumnos_eliminados += 1
+                        
+                        # Salir si ya eliminó los 2 requeridos
+                        if alumnos_eliminados == alumnos_requeridos:
+                            print("■■■■■- Ambos alumnos eliminados con éxito -■■■■■")
+                            return True
+                        break
+            
+            # Verificar si no encontró todos los alumnos
+            if alumnos_eliminados < alumnos_requeridos:
+                print(f"¡Atención! Solo se eliminaron {alumnos_eliminados} de {alumnos_requeridos} alumnos")
                 return False
 
-
-
+        except Exception as e:
+            print(f"■■■■■- Error durante eliminación: {str(e)} ❌ -■■■■■")
+            return False       
 #TEsteos
-
-    def pruebas(self, Orden, Primer_Apellido, Segundo_Apellido, Nombre, ID):
+    def pruebas(self, Orden, Primer_Apellido, Segundo_Apellido, Nombre, ID):    
         DatosAlumnos = {
             "Orden_1": {
                 "Estudiante_1": {"Orden": "1", "Primer_Apellido": "Diaz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
@@ -473,13 +501,9 @@ class nominas_functions():
         else:
             print("■■■■■-El script falló. Al menos un dato es incorrecto ✅✅✅ -■■■■■")
             raise AssertionError("■■■■■-Al menos un dato es incorrecto ❌❌❌ -■■■■■")
-        
-        
-        
-        
     def pruebas3filas(self, Orden, Primer_Apellido, Segundo_Apellido, Nombre, ID):
             DatosAlumnos = {
-                "Orden_1": {
+            "Orden_1": {
                 "Estudiante_1": {"Orden": "1", "Primer_Apellido": "Diaz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
                 "Estudiante_2": {"Orden": "2", "Primer_Apellido": "Fernandez", "Segundo_Apellido": "Garcia", "Nombre": "Ana", "ID": "14119475-5"},
                 "Estudiante_3": {"Orden": "3", "Primer_Apellido": "Gonzalez", "Segundo_Apellido": "Lopez", "Nombre": "Maria", "ID": "2987505-7"}

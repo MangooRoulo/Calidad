@@ -60,4 +60,8 @@ class global_functions():
         self.driver.find_element(By.XPATH, "//button[contains(.,'Cerrar Sesión')]").click()
         print("■■■■■-Fin cerrar sesion-■■■■■")
         time.sleep(2)
+    
+        
+        
+
         

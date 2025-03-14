@@ -124,9 +124,9 @@ def test_Ordenamientos(driver_setup):
 
         funcion.inicioSesion()
         funcionNominas.AccesoNominas()
-
         #funcionNominas.pruebas("Orden","Primer_Apellido","Segundo_Apellido","Nombre","ID")
         funcionNominas.pruebas3filas("Orden","Primer_Apellido","Segundo_Apellido","Nombre","ID")
+        funcion.cerrarSesion()
 
     except Exception as e:
         # Tomar la captura de pantalla si ocurre un error

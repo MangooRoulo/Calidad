@@ -50,3 +50,16 @@ NombreCursos = "Cursos"
 CursoPrimero = "//td[normalize-space()='Enseñanza Básica']"
 CursoItem = "//span[normalize-space()='1º Primero-Basico-SA']"
 CursoNombre = "1º Primero-Basico-SA"
+
+#Campos Alumnos
+AgregarEstudiante = "(//span[normalize-space()='Agregar estudiante'])[1]"
+Indentificador = "(//input[@id='dni_alumno'])[1]"
+NombreEstudiante = "(//input[@id='nombre'])[1]"
+ApellidoEstudiante = "(//input[@id='apellido'])[1]"
+SegundoApellido = "(//input[@id='apellido_dos'])[1]"
+FechaInscripción = "//input[@id='fecha_inscripcion']"
+FechaNacimiento = "(//input[@id='fecha_nac'])[1]"
+BotonGuardar = "(//button[normalize-space()='Guardar'])[1]"
+BotonConfirmar = "//button[normalize-space()='Guardar']"
+
+#Campos Eliminar Alumno

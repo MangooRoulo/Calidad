@@ -1,8 +1,5 @@
 import os
 import pytest
-import time
-import Campos
-from selenium.webdriver.common.by import By
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options as ChromeOptions
@@ -80,11 +77,11 @@ def abrirNavegador(navegador="chrome", incognito=True, download_path=None, token
                 "X-test-run": token  # Token proporcionado
             }
         })
-        print(f"Token aplicado correctamente: {token}")
+        print(f"■■■■■-Token aplicado correctamente: {token} ✅✅✅ -■■■■■")
 
     driver.maximize_window()
     driver.get(url)  # Navegar a la URL especificada
-    print(f"■■■■■-Iniciando Tests en {navegador}■■■■■")
+    print(f"■■■■■-Iniciando Tests en {navegador}-■■■■■")
     return driver
 
 @pytest.fixture(scope="function")
@@ -118,100 +115,21 @@ def pytest_runtest_makereport(item, call):
             take_screenshot_on_failure(driver, item.name)
 
 @allure.feature('Nominas Test')
-def test_AccesoNominas(driver_setup):
+def test_Ordenamientos(driver_setup):
     driver = driver_setup
-
-        # Datos de ordenamientos
-    Ordenamientos = {
-            "Estudiante_1": {
-                "Orden": "1",
-                "Primer_Apellido": "Diaz",
-                "Segundo_Apellido": "Mendoza",
-                "Nombre": "Sofia",
-                "ID": "2181782-1",
-                "Genero": "Mujer"
-            },
-            "Estudiante_2": {
-                "Orden": "3",
-                "Primer_Apellido": "Gonzalez",
-                "Segundo_Apellido": "Lopez",
-                "Nombre": "Maria",
-                "ID": "2987505-7",
-                "Genero": "Mujer"
-            },
-            "Estudiante_3": {
-                "Orden": "5",
-                "Primer_Apellido": "Martinez",
-                "Segundo_Apellido": "Sanchez",
-                "Nombre": "Juan",
-                "ID": "8571154-7",
-                "Genero": "Varón"
-            }
-        }
-
+    
     try:
-            # Inicializar funciones
-            funcion = global_functions(driver)
-            funcionNominas = nominas_functions(driver)
+        funcion = global_functions(driver)
+        funcionNominas = nominas_functions(driver)
 
-            # Iniciar sesión
-            funcion.inicioSesion()
-
-            # Acceder a la sección de nóminas
-            funcionNominas.AccesoNominas()
-
-            # Aplicar criterios y ordenamientos
-            for criterio in funcionNominas.criterios:
-                print(f"■■■■■-Inicio Asignación de criterio {criterio}-■■■■■")
-                
-                # Seleccionar Criterio
-                driver.find_element(By.XPATH, Campos.BotonDespliegueCriterio).click()
-                time.sleep(2)
-                driver.find_element(By.XPATH, criterio).click()
-                time.sleep(2)
-                
-                # Aceptar el criterio seleccionado
-                driver.find_element(By.XPATH, Campos.botonContinuar).click()
-                time.sleep(2)
-                
-                # Verificar mensaje de éxito
-                assert Campos.MensajeExito in driver.find_element(By.XPATH, Campos.LabelAceptar).text, "Mensaje Erroneo"
-                print(f"■■■■■-Fin asignación de criterio {criterio}-■■■■■")
-                
-                # Aplicar ordenamientos
-                for ordenamiento in funcionNominas.ordenamientos_xpath:
-                    print(f"■■■■■-Aplicando ordenamiento {ordenamiento}-■■■■■")
-                    
-                    # Seleccionar Ordenamiento
-                    driver.find_element(By.XPATH, Campos.BotonDespliegueOrdenamiento).click()
-                    time.sleep(2)
-                    driver.find_element(By.XPATH, ordenamiento).click()
-                    time.sleep(2)
-                    
-                    # Aceptar el ordenamiento seleccionado
-                    driver.find_element(By.XPATH, Campos.botonContinuar).click()
-                    time.sleep(2)
-                    
-                    # Verificar mensaje de éxito
-                    assert Campos.MensajeExito in driver.find_element(By.XPATH, Campos.LabelAceptar).text, "Mensaje Erroneo"
-                    print(f"■■■■■-Fin Aplicando ordenamiento {ordenamiento}-■■■■■")
-                    
-                    # Obtener el orden esperado de los alumnos
-                    orden_esperado = funcionNominas.obtener_orden_esperado(criterio, ordenamiento, Ordenamientos)
-                    
-                    # Validar el orden de los alumnos en la interfaz
-                    funcionNominas.validar_orden_alumnos(orden_esperado)
-                    
-                    # Regresar a la sección de nóminas
-                    funcionNominas.AccesoNominas()
-                    time.sleep(2)
-
-            # Cerrar sesión
-            funcion.cerrarSesion()
+        funcion.inicioSesion()
+        funcionNominas.AccesoCrusos()
+        funcionNominas.crearAlumno()
+        funcionNominas.validar_informacion_curso("Orden","Primer_Apellido","Segundo_Apellido","Nombre","ID")
+        funcion.cerrarSesion()
 
     except Exception as e:
-            print(f"Ocurrió un error: {e}")
-
-    finally:
-            # Cerrar el navegador
-            driver.quit()
+        # Tomar la captura de pantalla si ocurre un error
+        allure.attach(driver.get_screenshot_as_png(), name="screenshot_error", attachment_type=AttachmentType.PNG)
+        print(f"Error: {e}")
+        raise  # Re-lanzar la excepción para que pytest la maneje
