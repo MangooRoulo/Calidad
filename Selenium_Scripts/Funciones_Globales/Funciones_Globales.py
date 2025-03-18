@@ -34,7 +34,7 @@ class global_functions():
 
     # *************************************************Funciones Recurrentes*************************************************
     def inicioSesion(self, usuario=usuario, clave=clave):
-        print("■■■■■-Inicio inicio sesion-■■■■■")
+        print("■■■■■- Inicio inicio sesion -■■■■■")
         self.driver.implicitly_wait(20)
         email_input = self.driver.find_element(By.XPATH, "//input[@placeholder='ejemplo@colegium.com']")
         email_input.send_keys(str(usuario))
@@ -48,18 +48,19 @@ class global_functions():
         # nombre_colegio = self.driver.find_element(By. XPATH, "(//p[text()='colegio automatización chile'])[1]").text
         # print(f"■■■■■■■■■■ {nombre_colegio}")
         # assert nombre_colegio == colegio
-        print("■■■■■-Fin inicio sesion-■■■■■")
+        print("■■■■■- Fin inicio sesion -■■■■■\n")
         time.sleep(2)
 
     def cerrarSesion(self):
-        print("■■■■■-Inicio cerrar sesion-■■■■■")
+        print("■■■■■- Inicio cerrar sesion -■■■■■")
         time.sleep(2)
         self.driver.implicitly_wait(70)
         self.driver.find_element(By.ID, "avatar").click()
         self.driver.implicitly_wait(70)
         self.driver.find_element(By.XPATH, "//button[contains(.,'Cerrar Sesión')]").click()
-        print("■■■■■-Fin cerrar sesion-■■■■■")
+        print("■■■■■- Fin cerrar sesion -■■■■■\n")
         time.sleep(2)
+    
     
         
         

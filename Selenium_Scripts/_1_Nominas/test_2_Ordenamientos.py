@@ -77,11 +77,11 @@ def abrirNavegador(navegador="chrome", incognito=True, download_path=None, token
                 "X-test-run": token  # Token proporcionado
             }
         })
-        print(f"■■■■■-Token aplicado correctamente: {token} ✅✅✅ -■■■■■")
+        print(f"■■■■■- ✅✅✅ Token aplicado correctamente: {token} ✅✅✅ -■■■■■")
 
     driver.maximize_window()
     driver.get(url)  # Navegar a la URL especificada
-    print(f"■■■■■-Iniciando Tests en {navegador}-■■■■■")
+    print(f"■■■■■- Iniciando Tests en {navegador} -■■■■■")
     return driver
 
 @pytest.fixture(scope="function")

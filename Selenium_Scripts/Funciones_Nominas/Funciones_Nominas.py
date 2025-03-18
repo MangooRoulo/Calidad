@@ -43,7 +43,7 @@ class nominas_functions():
 # Funciones
     # *************************************************Funciones Recurrentes*************************************************
     def AccesoNominas(self):
-        print("■■■■■-Inicio Acceso Nominas-■■■■■")
+        print("■■■■■- Inicio Acceso Nominas -■■■■■")
         time.sleep(2)
         self.driver.implicitly_wait(20) 
         self.driver.find_element(By.XPATH, Campos.Configuracion).click()
@@ -56,17 +56,17 @@ class nominas_functions():
         self.driver.implicitly_wait(20) 
         # Verificar que se haya ingresado en la sección correspondiente
         assert Campos.SeccionNominas in self.driver.find_element(By.XPATH, Campos.NombreNominas).text, "Sección Erronea"
-        print("■■■■■-Fin Acceso Nominas-■■■■■")
+        print("■■■■■- Fin Acceso Nominas -■■■■■\n")
         time.sleep(2)  
     def AccesoCrusos(self):
-        print(f"■■■■■-Acceso Cursos-■■■■■")
+        print(f"■■■■■- Acceso Cursos -■■■■■")
         self.driver.find_element(By.XPATH, Campos.botonCursos).click()
         self.driver.implicitly_wait(20)
         time.sleep(2)
         self.driver.find_element(By.XPATH, Campos.CursoPrimero).click()
         self.driver.implicitly_wait(20)
         time.sleep(2)
-        print(f"■■■■■-Fin Acceso Cursos-■■■■■")
+        print(f"■■■■■- Fin Acceso Cursos -■■■■■\n")
         
     def validar_informacion_curso(self, Orden, Primer_Apellido, Segundo_Apellido, Nombre, ID):
         
@@ -504,14 +504,14 @@ class nominas_functions():
     def pruebas3filas(self, Orden, Primer_Apellido, Segundo_Apellido, Nombre, ID):
             DatosAlumnos = {
             "Orden_1": {
-                "Estudiante_1": {"Orden": "1", "Primer_Apellido": "Diaz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
+                "Estudiante_1": {"Orden": "1", "Primer_Apellido": "Diawwz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
                 "Estudiante_2": {"Orden": "2", "Primer_Apellido": "Fernandez", "Segundo_Apellido": "Garcia", "Nombre": "Ana", "ID": "14119475-5"},
                 "Estudiante_3": {"Orden": "3", "Primer_Apellido": "Gonzalez", "Segundo_Apellido": "Lopez", "Nombre": "Maria", "ID": "2987505-7"}
             },
             "Orden_2": {
-                "Estudiante_4": {"Orden": "1", "Primer_Apellido": "Diaz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
+                "Estudiante_4": {"Orden": "1", "Primer_Apellido": "Diawwz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
                 "Estudiante_5": {"Orden": "2", "Primer_Apellido": "Fernandez", "Segundo_Apellido": "Garcia", "Nombre": "Ana", "ID": "14119475-5"},
-                "Estudiante_4": {"Orden": "3", "Primer_Apellido": "Gonzalez", "Segundo_Apellido": "Lopez", "Nombre": "Maria", "ID": "2987505-7"}
+                "Estudiante_6": {"Orden": "3", "Primer_Apellido": "Gonzalez", "Segundo_Apellido": "Lopez", "Nombre": "Maria", "ID": "2987505-7"}
             },
             "Orden_3": {
                 "Estudiante_7": {"Orden": "2", "Primer_Apellido": "Fernandez", "Segundo_Apellido": "Garcia", "Nombre": "Ana", "ID": "14119475-5"},
@@ -606,18 +606,11 @@ class nominas_functions():
         }
 
             criterios = [
-                Campos.AZPrimerApellido,
-                Campos.AZNombre,
-                Campos.AZVaronesMujeres,
-                Campos.AZMjeresVarones
+                Campos.AZPrimerApellido, Campos.AZNombre, Campos.AZVaronesMujeres,Campos.AZMjeresVarones
             ]
 
             ordenamientos = [
-                Campos.NumeroDeLista,
-                Campos.AZOPrimerApellido,
-                Campos.AZONombre,
-                Campos.AZOVaronesMujeres,
-                Campos.AZOMujeresVarones
+                Campos.NumeroDeLista, Campos.AZOPrimerApellido, Campos.AZONombre, Campos.AZOVaronesMujeres, Campos.AZOMujeresVarones
             ]
 
             # Contador para llevar el seguimiento de los órdenes
@@ -627,7 +620,7 @@ class nominas_functions():
             todos_correctos = True
 
             for criterio in criterios:
-                print(f"■■■■■-Inicio Asignación de criterio {criterio}-■■■■■")
+                print(f"■■■■■- Inicio Asignación de criterio {criterio} -■■■■■")
                 
                 # Seleccionar Criterio
                 self.driver.find_element(By.XPATH, Campos.BotonDespliegueCriterio).click()
@@ -645,10 +638,10 @@ class nominas_functions():
                 # Verificar mensaje de éxito
                 assert Campos.MensajeExito in self.driver.find_element(By.XPATH, Campos.LabelAceptar).text, "Mensaje Erroneo"
                             
-                print(f"■■■■■-Fin asignación de criterio {criterio}-■■■■■")
+                print(f"■■■■■- Fin asignación de criterio {criterio} -■■■■■\n")
                 
                 for ordenamiento in ordenamientos:
-                    print(f"■■■■■-Aplicando ordenamiento {ordenamiento}-■■■■■")
+                    print(f"■■■■■- Aplicando ordenamiento {ordenamiento} -■■■■■")
                     
                     # Seleccionar Ordenamiento
                     self.driver.find_element(By.XPATH, Campos.BotonDespliegueOrdenamiento).click()
@@ -666,7 +659,7 @@ class nominas_functions():
                     # Verificar mensaje de éxito
                     assert Campos.MensajeExito in self.driver.find_element(By.XPATH, Campos.LabelAceptar).text, "Mensaje Erroneo"
                             
-                    print(f"■■■■■-Fin Aplicando ordenamiento {ordenamiento}-■■■■■")
+                    print(f"■■■■■- Fin Aplicando ordenamiento {ordenamiento} -■■■■■\n")
                     
                     # Acceder a la sección de cursos
                     self.AccesoCrusos()
@@ -674,53 +667,58 @@ class nominas_functions():
                     time.sleep(2)
                         
                     # Validar la información de los alumnos según el orden actual
-                    orden_key = f"Orden_{contador_orden}"  # Orden_1, Orden_2, etc.
+                    orden_key = f"Orden_{contador_orden}"
                     alumnos = DatosAlumnos.get(orden_key, {})
 
-                    print(f"■■■■■-Validando Información del {orden_key}-■■■■■")
+                    print(f"■■■■■- Validando {orden_key} -■■■■■")
 
-                    for alumno_key, alumno in alumnos.items():
-                        print(f"■■■■■-Validando Información del {alumno_key}-■■■■■")
+                    for idx_alumno, (alumno_key, alumno) in enumerate(alumnos.items()):
+                        # Solo validar primeros 3 alumnos (0-based index)
+                        if idx_alumno >= 3:
+                            break
+                        
+                        print(f"■■■■■- Validando: {alumno['Nombre']} [{alumno_key}] -■■■■■")
                         
                         try:
                             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//table[@id='filterTbl']")))
                             filas = self.driver.find_elements(By.XPATH, "(//tbody)[1]/tr")
+                            primeras_tres_filas = filas[:3]
                             
-                            # Limitar la validación a las primeras 3 filas
-                            primeras_tres_filas = filas[:3]  # <-- Modificación clave
-                            encontrado = False
-                            
-                            for fila in primeras_tres_filas:  # <-- Solo procesa las 3 primeras
-                                columnas = fila.find_elements(By.TAG_NAME, "td")
-                                texto_columnas = [columna.text.strip() for columna in columnas]
-                                
-                                if (alumno["Orden"] == texto_columnas[0] and
-                                    alumno["Primer_Apellido"] == texto_columnas[1] and
-                                    alumno["Segundo_Apellido"] == texto_columnas[2] and
-                                    alumno["Nombre"] == texto_columnas[3] and
-                                    alumno["ID"] == texto_columnas[4]):
-                                    encontrado = True
-                                    print(f"■■■■■-Información del alumno {alumno['Nombre']} es correcta ✅✅✅ -■■■■■")
-                                    break
-                            
-                            if not encontrado:
-                                print(f"■■■■■-Error: La Información del {alumno['Nombre']} en el {orden_key} es Incorrecta ❌❌❌ -■■■■■")
-                                # Comparar con las primeras 3 filas
-                                for idx, fila in enumerate(primeras_tres_filas, 1):
-                                    columnas_fila = fila.find_elements(By.TAG_NAME, "td")
-                                    texto_fila = [col.text.strip() for col in columnas_fila]
-                                    print(f"Datos fila {idx}: {texto_fila}")
-                                    
+                            # Verificar si existe la fila correspondiente
+                            if idx_alumno >= len(primeras_tres_filas):
+                                print(f"■■■■■- ❌❌❌ Fila {idx_alumno + 1} no existe para {alumno['Nombre']} ❌❌❌ -■■■■■")
                                 todos_correctos = False
+                                continue
+                                
+                            fila = primeras_tres_filas[idx_alumno]
+                            columnas = fila.find_elements(By.TAG_NAME, "td")
+                            texto_columnas = [col.text.strip() for col in columnas]
+                            
+                            # Validación específica por posición
+                            if (alumno["Orden"] == texto_columnas[0] 
+                                and alumno["Primer_Apellido"] == texto_columnas[1]
+                                and alumno["Segundo_Apellido"] == texto_columnas[2]
+                                and alumno["Nombre"] == texto_columnas[3]
+                                and alumno["ID"] == texto_columnas[4]):
+                                
+                                print(f"■■■■■- ✅✅✅ [Estudiante_{idx_alumno + 1}] Datos correctos ✅✅✅ -■■■■■")
+                            else:
+                                errores = [
+                                    f"{campo}: '{alumno[campo]}' deberia ser '{texto_columnas[i]}'"
+                                    for i, campo in enumerate(["Orden", "Primer_Apellido", "Segundo_Apellido", "Nombre", "ID"])
+                                    if alumno[campo] != texto_columnas[i]
+                                ]
+                                
+                                print(f"■■■■■- ❌❌❌ [Estudiante_{idx_alumno + 1}] Errores: {', '.join(errores)} ❌❌❌ -■■■■■")
+                                todos_correctos = False
+
                         except Exception as e:
-                            print(f"■■■■■-Error al validar información del alumno: {str(e)} ❌❌❌ -■■■■■")
-                            todos_correctos = False  # Cambiar la bandera a False
+                            print(f"■■■■■- ❌❌❌ Error crítico en fila {idx_alumno + 1}: {str(e)} ❌❌❌ -■■■■■")
+                            todos_correctos = False
+
+                        print(f"■■■■■- Fin validación {alumno_key} -■■■■■")
                         
-                        print(f"■■■■■-Fin Validando Información del {alumno_key}-■■■■■")
-                    
-                    print(f"■■■■■-Fin Validando Información del {orden_key}-■■■■■")
-                    
-                    # Incrementar el contador de órdenes
+                    print(f"■■■■■- Fin {orden_key} -■■■■■\n")
                     contador_orden += 1
                     
                     # Regresar a la sección de nóminas
@@ -730,7 +728,7 @@ class nominas_functions():
 
             # Verificar si todos los datos fueron correctos
             if todos_correctos:
-                print("■■■■■-El script se ejecutó con éxito. Todos los datos son correctos ✅✅✅ -■■■■■")
+                print("■■■■■- ✅✅✅ El script se ejecutó con éxito. Todos los datos son correctos ✅✅✅ -■■■■■\n")
             else:
-                print("■■■■■-El script falló. Al menos un dato es incorrecto ✅✅✅ -■■■■■")
-                raise AssertionError("■■■■■-Al menos un dato es incorrecto ❌❌❌ -■■■■■")
+                print("■■■■■- ✅✅✅ El script falló. Al menos un dato es incorrecto ✅✅✅ -■■■■■\n")
+                raise AssertionError("■■■■■- ❌❌❌ Al menos un dato es incorrecto ❌❌❌ -■■■■■\n")
