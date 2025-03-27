@@ -730,5 +730,4 @@ class nominas_functions():
             if todos_correctos:
                 print("■■■■■- ✅✅✅ El script se ejecutó con éxito. Todos los datos son correctos ✅✅✅ -■■■■■\n")
             else:
-                print("■■■■■- ✅✅✅ El script falló. Al menos un dato es incorrecto ✅✅✅ -■■■■■\n")
                 raise AssertionError("■■■■■- ❌❌❌ Al menos un dato es incorrecto ❌❌❌ -■■■■■\n")

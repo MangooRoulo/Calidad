@@ -15,7 +15,7 @@ from allure_commons.types import AttachmentType
 from Funciones_Globales.Funciones_Globales import global_functions
 from Funciones_Nominas.Funciones_Nominas import nominas_functions
 
-def abrirNavegador(navegador="chrome", incognito=True, download_path=None, token=None, url="http://beta_inf.colegium.cloud"):
+def abrirNavegador(navegador="chrome", incognito=True, download_path=None, token=None, url="http://app.colegium.cloud"):
     if navegador == "chrome":
         options = ChromeOptions()
         if incognito:
@@ -87,7 +87,7 @@ def abrirNavegador(navegador="chrome", incognito=True, download_path=None, token
 @pytest.fixture(scope="function")
 def driver_setup():
     token = 'U8xv6X$L2>l&'  # El token que te proporcionaron
-    driver = abrirNavegador(navegador="chrome", download_path=os.path.join(os.getcwd(), "Descargas"), token=token, url="http://beta_inf.colegium.cloud")
+    driver = abrirNavegador(navegador="chrome", download_path=os.path.join(os.getcwd(), "Descargas"), token=token, url="http://app.colegium.cloud")
     yield driver
     cerrar_driver(driver)
 
