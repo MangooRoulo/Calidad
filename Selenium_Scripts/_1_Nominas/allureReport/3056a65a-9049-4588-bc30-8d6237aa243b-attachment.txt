@@ -1,0 +1,445 @@
+■■■■■- ✅✅✅ Token aplicado correctamente: U8xv6X$L2>l& ✅✅✅ -■■■■■
+■■■■■- Iniciando Tests en chrome -■■■■■
+■■■■■- Inicio inicio sesion -■■■■■
+■■■■■- Fin inicio sesion -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Inicio Asignación de criterio (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[1] -■■■■■
+■■■■■- Fin asignación de criterio (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[1] -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[normalize-space()='Número de lista'])[1] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[normalize-space()='Número de lista'])[1] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_1 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_1] -■■■■■
+■■■■■- ❌❌❌ [Estudiante_1] Errores: Primer_Apellido: 'Diawwz' deberia ser 'Diaz' ❌❌❌ -■■■■■
+■■■■■- Fin validación Estudiante_1 -■■■■■
+■■■■■- Validando: Ana [Estudiante_2] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_2 -■■■■■
+■■■■■- Validando: Maria [Estudiante_3] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_3 -■■■■■
+■■■■■- Fin Orden_1 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_2 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_4] -■■■■■
+■■■■■- ❌❌❌ [Estudiante_1] Errores: Primer_Apellido: 'Diawwz' deberia ser 'Diaz' ❌❌❌ -■■■■■
+■■■■■- Fin validación Estudiante_4 -■■■■■
+■■■■■- Validando: Ana [Estudiante_5] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_5 -■■■■■
+■■■■■- Validando: Maria [Estudiante_6] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_6 -■■■■■
+■■■■■- Fin Orden_2 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento //tbody/tr[2]/td[2]/div[1]/div[1]/div[1]/ul[1]/li[3]/button[1]/div[1]/span[1] -■■■■■
+■■■■■- Fin Aplicando ordenamiento //tbody/tr[2]/td[2]/div[1]/div[1]/div[1]/ul[1]/li[3]/button[1]/div[1]/span[1] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_3 -■■■■■
+■■■■■- Validando: Ana [Estudiante_7] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_7 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_8] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_8 -■■■■■
+■■■■■- Validando: Juan [Estudiante_9] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_9 -■■■■■
+■■■■■- Fin Orden_3 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_4 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_10] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_10 -■■■■■
+■■■■■- Validando: Juan [Estudiante_11] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_11 -■■■■■
+■■■■■- Validando: Luis [Estudiante_12] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_12 -■■■■■
+■■■■■- Fin Orden_4 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_5 -■■■■■
+■■■■■- Validando: Ana [Estudiante_13] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_13 -■■■■■
+■■■■■- Validando: Maria [Estudiante_14] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_14 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_15] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_15 -■■■■■
+■■■■■- Fin Orden_5 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Inicio Asignación de criterio (//span[contains(text(),'A-Z Nombre')])[1] -■■■■■
+■■■■■- Fin asignación de criterio (//span[contains(text(),'A-Z Nombre')])[1] -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[normalize-space()='Número de lista'])[1] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[normalize-space()='Número de lista'])[1] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_6 -■■■■■
+■■■■■- Validando: Ana [Estudiante_16] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_16 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_17] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_17 -■■■■■
+■■■■■- Validando: Juan [Estudiante_18] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_18 -■■■■■
+■■■■■- Fin Orden_6 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_7 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_19] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_19 -■■■■■
+■■■■■- Validando: Ana [Estudiante_20] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_20 -■■■■■
+■■■■■- Validando: Maria [Estudiante_21] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_21 -■■■■■
+■■■■■- Fin Orden_7 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento //tbody/tr[2]/td[2]/div[1]/div[1]/div[1]/ul[1]/li[3]/button[1]/div[1]/span[1] -■■■■■
+■■■■■- Fin Aplicando ordenamiento //tbody/tr[2]/td[2]/div[1]/div[1]/div[1]/ul[1]/li[3]/button[1]/div[1]/span[1] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_8 -■■■■■
+■■■■■- Validando: Ana [Estudiante_22] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_22 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_23] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_23 -■■■■■
+■■■■■- Validando: Juan [Estudiante_24] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_24 -■■■■■
+■■■■■- Fin Orden_8 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_9 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_25] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_25 -■■■■■
+■■■■■- Validando: Juan [Estudiante_26] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_26 -■■■■■
+■■■■■- Validando: Luis [Estudiante_27] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_27 -■■■■■
+■■■■■- Fin Orden_9 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_10 -■■■■■
+■■■■■- Validando: Ana [Estudiante_28] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_28 -■■■■■
+■■■■■- Validando: Maria [Estudiante_29] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_29 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_30] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_30 -■■■■■
+■■■■■- Fin Orden_10 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Inicio Asignación de criterio (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[1] -■■■■■
+■■■■■- Fin asignación de criterio (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[1] -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[normalize-space()='Número de lista'])[1] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[normalize-space()='Número de lista'])[1] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_11 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_31] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_31 -■■■■■
+■■■■■- Validando: Juan [Estudiante_32] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_32 -■■■■■
+■■■■■- Validando: Luis [Estudiante_33] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_33 -■■■■■
+■■■■■- Fin Orden_11 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_12 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_34] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_34 -■■■■■
+■■■■■- Validando: Ana [Estudiante_35] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_35 -■■■■■
+■■■■■- Validando: Maria [Estudiante_36] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_36 -■■■■■
+■■■■■- Fin Orden_12 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento //tbody/tr[2]/td[2]/div[1]/div[1]/div[1]/ul[1]/li[3]/button[1]/div[1]/span[1] -■■■■■
+■■■■■- Fin Aplicando ordenamiento //tbody/tr[2]/td[2]/div[1]/div[1]/div[1]/ul[1]/li[3]/button[1]/div[1]/span[1] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_13 -■■■■■
+■■■■■- Validando: Ana [Estudiante_37] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_37 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_38] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_38 -■■■■■
+■■■■■- Validando: Juan [Estudiante_39] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_39 -■■■■■
+■■■■■- Fin Orden_13 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_14 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_40] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_40 -■■■■■
+■■■■■- Validando: Juan [Estudiante_41] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_41 -■■■■■
+■■■■■- Validando: Luis [Estudiante_42] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_42 -■■■■■
+■■■■■- Fin Orden_14 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_15 -■■■■■
+■■■■■- Validando: Ana [Estudiante_43] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_43 -■■■■■
+■■■■■- Validando: Maria [Estudiante_44] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_44 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_45] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_45 -■■■■■
+■■■■■- Fin Orden_15 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Inicio Asignación de criterio (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[1] -■■■■■
+■■■■■- Fin asignación de criterio (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[1] -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[normalize-space()='Número de lista'])[1] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[normalize-space()='Número de lista'])[1] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_16 -■■■■■
+■■■■■- Validando: Ana [Estudiante_46] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_46 -■■■■■
+■■■■■- Validando: Maria [Estudiante_47] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_47 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_48] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_48 -■■■■■
+■■■■■- Fin Orden_16 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Primer apellido'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_17 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_49] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_49 -■■■■■
+■■■■■- Validando: Ana [Estudiante_50] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_50 -■■■■■
+■■■■■- Validando: Maria [Estudiante_51] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_51 -■■■■■
+■■■■■- Fin Orden_17 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento //tbody/tr[2]/td[2]/div[1]/div[1]/div[1]/ul[1]/li[3]/button[1]/div[1]/span[1] -■■■■■
+■■■■■- Fin Aplicando ordenamiento //tbody/tr[2]/td[2]/div[1]/div[1]/div[1]/ul[1]/li[3]/button[1]/div[1]/span[1] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_18 -■■■■■
+■■■■■- Validando: Ana [Estudiante_52] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_52 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_53] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_53 -■■■■■
+■■■■■- Validando: Juan [Estudiante_54] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_54 -■■■■■
+■■■■■- Fin Orden_18 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Varones - Mujeres'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_19 -■■■■■
+■■■■■- Validando: Carlos [Estudiante_55] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_55 -■■■■■
+■■■■■- Validando: Juan [Estudiante_56] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_56 -■■■■■
+■■■■■- Validando: Luis [Estudiante_57] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_57 -■■■■■
+■■■■■- Fin Orden_19 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[2] -■■■■■
+■■■■■- Fin Aplicando ordenamiento (//span[@class='tw-text-sm'][normalize-space()='A-Z Mujeres - Varones'])[2] -■■■■■
+
+■■■■■- Acceso Cursos -■■■■■
+■■■■■- Fin Acceso Cursos -■■■■■
+
+■■■■■- Validando Orden_20 -■■■■■
+■■■■■- Validando: Ana [Estudiante_58] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_1] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_58 -■■■■■
+■■■■■- Validando: Maria [Estudiante_59] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_2] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_59 -■■■■■
+■■■■■- Validando: Sofia [Estudiante_60] -■■■■■
+■■■■■- ✅✅✅ [Estudiante_3] Datos correctos ✅✅✅ -■■■■■
+■■■■■- Fin validación Estudiante_60 -■■■■■
+■■■■■- Fin Orden_20 -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+■■■■■- Fin Acceso Nominas -■■■■■
+
+■■■■■- ✅✅✅ El script falló. Al menos un dato es incorrecto ✅✅✅ -■■■■■
+
+Error: ■■■■■- ❌❌❌ Al menos un dato es incorrecto ❌❌❌ -■■■■■
+
+Cerrando el driver...

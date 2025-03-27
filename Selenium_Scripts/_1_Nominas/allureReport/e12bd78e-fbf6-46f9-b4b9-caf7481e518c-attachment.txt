@@ -1,0 +1,7 @@
+■■■■■- ✅✅✅ Token aplicado correctamente: U8xv6X$L2>l& ✅✅✅ -■■■■■
+■■■■■- Iniciando Tests en chrome -■■■■■
+■■■■■- Inicio inicio sesion -■■■■■
+■■■■■- Fin inicio sesion -■■■■■
+
+■■■■■- Inicio Acceso Nominas -■■■■■
+Cerrando el driver...

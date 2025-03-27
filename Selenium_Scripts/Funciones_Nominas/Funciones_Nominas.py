@@ -504,12 +504,12 @@ class nominas_functions():
     def pruebas3filas(self, Orden, Primer_Apellido, Segundo_Apellido, Nombre, ID):
             DatosAlumnos = {
             "Orden_1": {
-                "Estudiante_1": {"Orden": "1", "Primer_Apellido": "Diawwz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
+                "Estudiante_1": {"Orden": "1", "Primer_Apellido": "Diaz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
                 "Estudiante_2": {"Orden": "2", "Primer_Apellido": "Fernandez", "Segundo_Apellido": "Garcia", "Nombre": "Ana", "ID": "14119475-5"},
                 "Estudiante_3": {"Orden": "3", "Primer_Apellido": "Gonzalez", "Segundo_Apellido": "Lopez", "Nombre": "Maria", "ID": "2987505-7"}
             },
             "Orden_2": {
-                "Estudiante_4": {"Orden": "1", "Primer_Apellido": "Diawwz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
+                "Estudiante_4": {"Orden": "1", "Primer_Apellido": "Diaz", "Segundo_Apellido": "Mendoza", "Nombre": "Sofia", "ID": "2181782-1"},
                 "Estudiante_5": {"Orden": "2", "Primer_Apellido": "Fernandez", "Segundo_Apellido": "Garcia", "Nombre": "Ana", "ID": "14119475-5"},
                 "Estudiante_6": {"Orden": "3", "Primer_Apellido": "Gonzalez", "Segundo_Apellido": "Lopez", "Nombre": "Maria", "ID": "2987505-7"}
             },
